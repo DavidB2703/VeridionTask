@@ -1,0 +1,9 @@
+flask
+flask-cors
+pandas
+torch
+sentence-transformers
+transformers
+scikit-learn
+python-dotenv
+google-genai
