@@ -5,66 +5,6 @@
 cd api
 python app.py
 ```
-
-The server will start on `http://localhost:5000`
-
-### Use the Web Interface
-
-1. Open your browser and go to `http://localhost:5000`
-2. Enter company information in the text area
-3. Click "Clasifică compania" (Classify company)
-4. See the top 3 predicted insurance taxonomy labels
-
-### API Endpoint
-
-**POST /classify**
-
-Request body:
-```json
-{
-  "text": "Company description and details..."
-}
-```
-
-Response:
-```json
-{
-  "success": true,
-  "predictions": ["Label 1", "Label 2", "Label 3"]
-}
-```
-
-## Models Used
-
-- **Sentence Transformer**: `intfloat/multilingual-e5-base` for generating embeddings
-- **Zero-shot Classifier**: `facebook/bart-large-mnli` for final classification
-- **Approach**: Hybrid embedding similarity + zero-shot classification
-
-## Notes
-
-- First run will download the models (~2GB total)
-- Classification uses CPU by default (CUDA support if available)
-- Models are loaded once at startup for fast inference
-
-## License
-
-This project is for educational purposes.
-
-*.pth
-*.h5
-*.hdf5
-
-# OS
-.DS_Store
-Thumbs.db
-*.log
-
-# Temporary files
-*.tmp
-*.bak
-*.swp
-# Insurance Taxonomy Classifier
-
 ## Modelul
 
 Modelul final este format din urmatoarele componente:
